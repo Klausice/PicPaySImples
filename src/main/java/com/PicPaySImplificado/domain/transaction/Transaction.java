@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.catalina.User;
+import com.PicPaySImplificado.domain.User.User;
 import org.hibernate.annotations.ManyToAny;
 
 import java.math.BigDecimal;
