@@ -1,10 +1,7 @@
 package com.PicPaySImplificado.domain.transaction;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import com.PicPaySImplificado.domain.User.User;
 import org.hibernate.annotations.ManyToAny;
 
@@ -16,6 +13,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 
 public class Transaction {
@@ -23,6 +21,7 @@ public class Transaction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private BigDecimal amount;
+    private User sender;
     @ManyToOne
     @JoinColumn(name = "receiver_id")
     private User receiver;
